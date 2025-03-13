@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;  
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para o Header */
+header {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/* Estilos para a Navegação */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para o Main */
+main {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+main p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Estilos para o Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
