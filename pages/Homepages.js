@@ -1,7 +1,7 @@
 // src/HomePage.js
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importando o JavaScript do Bootstrap
 import HomePage from "homePage.css";
 //import sobreNos from "../src/sobreNos";
 

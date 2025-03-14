@@ -88,8 +88,8 @@ function Footer() {
     <div>
       {/* Links da barra de navegação */}
       <ul>
-        <li><a href="#Home">Loja</a></li>
-        <li><a href="#Sobre">Sobre</a></li>
+        <li><a href="./HomePage.js">Loja</a></li>
+        <li><a href="./sobreNos.js">Sobre</a></li>
         <li><a href="#Politica">Política da Loja</a></li>
         <li><a href="#Contato">Contato</a></li>
       </ul>
