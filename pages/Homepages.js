@@ -19,8 +19,13 @@ function HomePage() {
     function Header() {
       return (
         <header>
+          <img 
+            src="./imagem/imgRoroninha.png" 
+            alt="Logo Ronroninha Cat Sitter" 
+            style={{ width: '100px', height: 'auto' }} // Ajuste o tamanho conforme necessário
+          />
           <h2>Ronroninha Cat Sitter</h2>
-          <p>Bem-vindo à minha página Cat Sitter</p>
+          <p>SERVIÇO OFERECIDO HÁ 10 ANOS EM PORTO ALEGRE</p>
         </header>
       );
     }
@@ -105,8 +110,8 @@ function HomePage() {
           <ul>
             <li><a href="#Home">Loja</a></li>
             <li><a href="./sobreNos.js">Sobre</a></li>
-            <li><a href="#Politica">Política da Loja</a></li>
-            <li><a href="#Contato">Contato</a></li>
+            <li><a href="./politica.js">Política da Loja</a></li>
+            <li><a href="./contato.js">Contato</a></li>
           </ul>
     
           {/* Direitos autorais */}

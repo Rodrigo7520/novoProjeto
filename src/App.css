@@ -1,61 +1,74 @@
+/* Reset geral */
 * {
   margin: 0;
-  padding: 0;  
+  padding: 0;
+  box-sizing: border-box; /* Garante que o padding não afete o tamanho total dos elementos */
 }
 
 body {
   font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Cor de fundo para o site */
+  color: #333; /* Texto padrão */
 }
 
-/* Estilos para o Header */
+/* Header */
 header {
-  background-color: rgb(141, 50, 114);
-  color: rgb(248, 195, 222);
+  background-color: #8d3272;
+  color: #f8c3de;
   padding: 20px;
   text-align: center;
+}
+
+header img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 header h2 {
   font-size: 2.5rem;
 }
 
-p {
+header p {
   font-size: 1.2rem;
+  margin-top: 10px;
 }
 
-/* Estilos para a Navegação */
+/* Navegação */
 nav {
   background-color: #f8ff97;
   padding: 10px 0;
 }
 
 nav ul {
-  list-style-type: none;
+  list-style: none;
   text-align: center;
 }
 
 nav ul li {
-  display: inline;
+  display: inline-block;
   margin: 0 15px;
 }
 
 nav ul li a {
-  color: rgb(235, 86, 185);
+  color: #eb56b9;
   text-decoration: none;
   font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
+  color: #8d3272;
   text-decoration: underline;
 }
 
-/* Estilos para o Main */
+/* Main (Conteúdo principal) */
 main {
   padding: 20px;
   background-color: #f4f4f4;
 }
 
-main h2 {
+/*main h2 {
   font-size: 2rem;
   margin-top: 20px;
 }
@@ -63,21 +76,61 @@ main h2 {
 main p {
   font-size: 1.2rem;
   line-height: 1.5;
+}*?
+
+/* Carousel */
+.carousel {
+  margin: 20px auto;
+  max-width: 800px; /* Centralizar e limitar a largura */
+  border-radius: 10px; /* Cantos arredondados */
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-/* Estilos para o Footer */
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Faz os controles ficarem brancos para melhor visibilidade */
+}
+
+/* Footer */
 footer {
-  background-color: rgb(226, 225, 141);
+  background-color: #e2e18d;
+  padding: 20px 0;
   text-align: center;
-  padding: 10px;
-  position: fixed;
+  color: #333;
+  position: fixed; /* Fixa o footer no final da página */
   width: 100%;
   bottom: 0;
 }
 
-.footer ul li a {
-  color: rgb(235, 86, 185);
-  text-decoration: none;
-  font-size: 1.1rem;
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
 }
 
+footer ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer ul li a {
+  color: #8d3272;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #eb56b9;
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}

@@ -19,8 +19,13 @@ function sobreNos() {
 function Header() {
   return (
     <header>
-      <h2>Ronroninha Cat Shop</h2>
-      <p>Conhecendo Nosso Trabalho</p>
+      <img 
+        src="./imagem/imgRoroninha.png" 
+        alt="Logo Ronroninha Cat Sitter" 
+        style={{ width: '100px', height: 'auto' }} // Ajuste o tamanho conforme necessário
+      />
+      <h2>Ronroninha Cat Sitter</h2>
+      <p>SERVIÇO OFERECIDO HÁ 10 ANOS EM PORTO ALEGRE</p>
     </header>
   );
 }
@@ -107,10 +112,10 @@ function Footer() {
     <div>
       {/* Links da barra de navegação */}
       <ul>
-        <li><a href="#Home">Loja</a></li>
-        <li><a href="#Sobre">Sobre</a></li>
-        <li><a href="#Politica">Política da Loja</a></li>
-        <li><a href="#Contato">Contato</a></li>
+        <li><a href=".homePage.js">Loja</a></li>
+        <li><a href="./sobreNos">Sobre</a></li>
+        <li><a href="./politica.js">Política da Loja</a></li>
+        <li><a href="./contato.js">Contato</a></li>
       </ul>
 
       {/* Direitos autorais */}

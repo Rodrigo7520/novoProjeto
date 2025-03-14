@@ -1,0 +1,113 @@
+/* politicaPrivacidade.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  header {
+    background-color: #ffcc99;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  header img {
+    display: block;
+    margin: 0 auto 10px;
+  }
+  
+  header h2 {
+    margin: 0;
+  }
+  
+  header p {
+    font-size: 1rem;
+  }
+  
+  /* Menu de navegação */
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ff9966;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    padding: 10px 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilo do conteúdo principal */
+  main {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  main section {
+    margin-bottom: 20px;
+  }
+  
+  main h3 {
+    color: #ff6633;
+    border-bottom: 2px solid #ff9966;
+    padding-bottom: 5px;
+  }
+  
+  main p {
+    line-height: 1.6;
+  }
+  
+  /* Estilo dos links e informações importantes */
+  strong {
+    color: #ff3300;
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: #ff9966;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+  
+  footer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  footer ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  footer ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  footer div {
+    margin-top: 10px;
+  }
+  
