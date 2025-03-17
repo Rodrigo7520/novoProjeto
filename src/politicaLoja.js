@@ -1,9 +1,9 @@
 import React from 'react';
-import './politicaPrivacidade.css';
+import './politicaLoja.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-function PoliticaPrivacidade() {
+function politicaLoja() {
   return (
     <div className="App">
       <Header />
@@ -32,10 +32,10 @@ function Nav() {
     return (
       <nav>
         <ul>
-          <li><a href="#Home">Home</a></li>
-          <li><a href=".sobreNos.js">Sobre nós</a></li>
-          <li><a href="./contato.js">Contato</a></li>
-          <li><a href="./src/cadastroUsusario.js">Entrar</a></li>
+            <li><a href="./pages/Homepages.js">Home</a></li>
+            <li><a href="./src/sobreNos.js">Sobre nos</a></li>
+            <li><a href="./src/Contato.js">Contato</a></li>
+            <li><a href="./src/cadastroUsusario.js">Entrar</a></li>
         </ul>
       </nav>
     );
@@ -123,10 +123,10 @@ function Footer() {
       <div>
         {/* Links da barra de navegação */}
         <ul>
-          <li><a href=".homePage.js">Loja</a></li>
-          <li><a href="./sobreNos">Sobre</a></li>
-          <li><a href="politica.js">Política da Loja</a></li>
-          <li><a href="./contato.js">Contato</a></li>
+        <li><a href="./pages/Homepages.js">Home</a></li>
+        <li><a href="./src/sobreNos.js">Sobre nos</a></li>
+        <li><a href="./src/Contato.js">Contato</a></li>
+        <li><a href="./src/cadastroUsusario.js">Entrar</a></li>
         </ul>
   
         {/* Direitos autorais */}
@@ -137,4 +137,4 @@ function Footer() {
     );
   }
 
-export default PoliticaPrivacidade;
+export default politicaLoja;

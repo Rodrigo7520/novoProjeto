@@ -2,10 +2,10 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importando o JavaScript do Bootstrap
-import HomePage from "homePage.css";
+
 //import sobreNos from "../src/sobreNos";
 
-function HomePage() {
+function Homepages() {
     return (
         <div className="App">
           <Header />
@@ -35,10 +35,10 @@ function HomePage() {
       return (
         <nav>
           <ul>
-            <li><a href="#Home">Home</a></li>
-            <li><a href="./sobreNos.js">Sobre nos</a></li>
-            <li><a href="./contato.js">Contato</a></li>
-            <li><a href="./App.js">Sair</a></li>
+            <li><a href="./pages/Homepages.js">Home</a></li>
+            <li><a href="./src/sobreNos.js">Sobre nos</a></li>
+            <li><a href="./src/Contato.js">Contato</a></li>
+            <li><a href="./src/cadastroUsusario.js">Entrar</a></li>
           </ul>
         </nav>
       );
@@ -122,4 +122,4 @@ function HomePage() {
       );
     }
 
-export default HomePage;
+export default Homepages;

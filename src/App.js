@@ -1,19 +1,22 @@
-import './App.css'; // Para o estilo da aplicação
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importando o JavaScript do Bootstrap
-import Entrar from './cadastroUsuario.js';
-import HomePage from '../pages/Homepages.js';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Homepages from './pages/Homepages';
+import Contatos from './contatos';
+import SobreNos from './sobreNos';
+import PoliticaLoja from './politicaLoja';
+import CadastroUsuario from './cadastroUsuario';
 
 // Componente Principal App
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Nav />
-      <Main />
-      <Footer />
-    </div>
+    <Router> {/* Envolva o conteúdo com o Router */}
+      <div className="App">
+        <Header />
+        <Nav />
+        <Main />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
@@ -21,9 +24,9 @@ function Header() {
   return (
     <header>
       <img 
-        src="./imagem/imgRoroninha.png" 
+        src="https://static.wixstatic.com/media/e17308_c34ca378d92440e283f79f66e720e9fe~mv2.png/v1/fill/w_156,h_136,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Site-Ronroninha-logo_edited.png" 
         alt="Logo Ronroninha Cat Sitter" 
-        style={{ width: '100px', height: 'auto' }} // Ajuste o tamanho conforme necessário
+        style={{ width: '100px', height: 'auto' }} 
       />
       <h2>Ronroninha Cat Sitter</h2>
       <p>SERVIÇO OFERECIDO HÁ 10 ANOS EM PORTO ALEGRE</p>
@@ -31,16 +34,15 @@ function Header() {
   );
 }
 
-
 // Componente Nav {menu de navegação}
 function Nav() {
   return (
     <nav>
       <ul>
-        <li><a href="#Home">Home</a></li>
-        <li><a href=".sobreNos.js">Sobre nos</a></li>
-        <li><a href="#Contato">Contato</a></li>
-        <li><a href="./src/cadastroUsusario.js">Entrar</a></li>
+        <li><Link to="/">Home</Link></li> {/* Usando o Link do react-router-dom */}
+        <li><Link to="/sobreNos.js">Sobre nós</Link></li>
+        <li><Link to="/contatos.js">Contato</Link></li>
+        <li><Link to="/cadastroUsuario.js">Entrar</Link></li>
       </ul>
     </nav>
   );
@@ -58,13 +60,13 @@ function Main() {
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="d-block w-100" src=".public/imagem1/fachaLoja.png" alt="Primeiro slide" />
+            <img className="d-block w-100" src="https://static.wixstatic.com/media/e17308_44001439ba344661b9487d7b4fc93d2f~mv2.png/v1/fill/w_980,h_370,al_c,q_90,enc_avif,quality_auto/e17308_44001439ba344661b9487d7b4fc93d2f~mv2.png" alt="Primeiro slide" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src=".public/imagem1/img2.png" alt="Segundo slide" />
+            <img className="d-block w-100" src="https://static.wixstatic.com/media/e17308_ecac9b129462404a92de1b2ea143e515~mv2.png/v1/fill/w_980,h_370,al_c,q_90,enc_avif,quality_auto/e17308_ecac9b129462404a92de1b2ea143e515~mv2.png" alt="Segundo slide" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src=".public/imagem1/img3.png" alt="Terceiro slide" />
+            <img className="d-block w-100" src="https://static.wixstatic.com/media/e17308_e207574b08d34987a1d2c7aad856d42c~mv2.png/v1/fill/w_980,h_370,al_c,q_90,enc_avif,quality_auto/e17308_e207574b08d34987a1d2c7aad856d42c~mv2.png" alt="Terceiro slide" />
           </div>
         </div>
         <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
@@ -84,19 +86,32 @@ function Main() {
 function Footer() {
   return (
     <div>
-      {/* Links da barra de navegação */}
-      <ul>
-        <li><a href="#Home">Loja</a></li>
-        <li><a href="./sobreNos.js">Sobre</a></li>
-        <li><a href="#Politica">Política da Loja</a></li>
-        <li><a href="./contatos.js">Contato</a></li>
-      </ul>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/sobreNos.js">Sobre nós</Link></li>
+          <li><Link to="/contatos.js">Contato</Link></li>
+          <li><Link to="/cadastroUsuario.js">Entrar</Link></li>
+        </ul>
+      </nav>
 
-      {/* Direitos autorais */}
       <div>
         <p>@ 2025 por Ronroninha Cat Shop CNPJ 37.848.640/0001-66</p>
       </div>
     </div>
+  );
+}
+
+// Definição das Rotas
+function AppRoutes() {
+  return (
+    <Routes> {/* Substitua Switch por Routes */}
+      <Route path="/" element={<Homepages />} />
+      <Route path="/sobreNos.js" element={<SobreNos />} />
+      <Route path="/contatos.js" element={<Contatos />} />
+      <Route path="/cadastroUsuario.js" element={<CadastroUsuario />} />
+      <Route path="/politicaLoja.js" element={<PoliticaLoja />} />
+    </Routes>
   );
 }
 

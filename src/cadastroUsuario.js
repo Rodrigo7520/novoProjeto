@@ -34,10 +34,10 @@ function Nav() {
   return (
     <nav>
       <ul>
-        <li><a href="./homePage.js">Home</a></li>
-        <li><a href=".sobreNos.js">Sobre nos</a></li>
-        <li><a href="./contato.js">Contato</a></li>
-        <li><a href="./src/cadastroUsuario.js">Entrar</a></li>
+          <li><a href="./pages/Homepages.js">Home</a></li>
+          <li><a href="./src/sobreNos.js">Sobre nos</a></li>
+          <li><a href="./src/Contato.js">Contato</a></li>
+          <li><a href="./src/cadastroUsusario.js">Entrar</a></li>
       </ul>
     </nav>
   );
@@ -139,10 +139,10 @@ function Footer() {
   return (
     <div>
       <ul>
-        <li><a href="./HomePage.js">Loja</a></li>
-        <li><a href="./sobreNos.js">Sobre</a></li>
-        <li><a href="./politica.js">Política da Loja</a></li>
-        <li><a href="./contatos.js">Contato</a></li>
+        <li><a href="./pages/Homepages.js">Home</a></li>
+        <li><a href="./src/sobreNos.js">Sobre nos</a></li>
+        <li><a href="./src/Contato.js">Contato</a></li>
+        <li><a href="./src/cadastroUsusario.js">Entrar</a></li>
       </ul>
       <div>
         <p>@ 2025 por Ronroninha Cat Shop CNPJ 37.848.640/0001-66</p>
