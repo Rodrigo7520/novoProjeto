@@ -65,6 +65,39 @@ app.post('/usuarios',(req,res)=>{
     });
 });
 
+//Rota para editar usuário 
+app.put('/usuarios/:id', (req, res) => {
+    const { id } = req.params;
+    const { nome, email } = req.body;
+    const query = 'UPDATE usuarios SET nome = ?, email = ? WHERE id = ?';
+
+    db.query(query, [nome, email, id], (err, results) => {
+        if (err) {
+            res.status(500).send('Erro ao atualizar no banco de dados');
+        } else if (results.affectedRows === 0) {
+            res.status(404).send('Usuário não encontrado');
+        } else {
+            res.status(200).send('Usuário atualizado com sucesso');
+        }
+    });
+});
+
+// Rota para excluir o usuário 
+app.delete('/usuarios/:id', (req, res) => {
+    const { id } = req.params;
+    const query = 'DELETE FROM usuarios WHERE id = ?';
+
+    db.query(query, [id], (err, results) => {
+        if (err) {
+            res.status(500).send('Erro ao excluir no banco de dados');
+        } else if (results.affectedRows === 0) {
+            res.status(404).send('Usuário não encontrado');
+        } else {
+            res.status(200).send('Usuário deletado com sucesso');
+        }
+    });
+});
+
 //Iniciar o servidor
 app.listen(port,()=>{
     console.log('Servidor rodando em http://localhost:${port}');

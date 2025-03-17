@@ -1,15 +1,12 @@
-// src/CadastroUsuario.js
+// src/LoginPage.js
 import React, { useState } from "react";
 
-function Entrar() {
+function LoginPage() {
   const [formData, setFormData] = useState({
-    nomeCompleto: "",
-    email: "",
-    telefone: "",
-    nomeGato: "",
+    usuario: "",
     senha: ""
   });
-[]
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -20,58 +17,26 @@ function Entrar() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Usuário cadastrado: ", formData);
-    // Aqui você pode fazer o envio dos dados para o servidor ou localStorage
-    alert("Usuário cadastrado com sucesso!");
-    setFormData({
-      nomeCompleto: "",
-      email: "",
-      telefone: "",
-      nomeGato: "",
-      senha: ""
-    });
+    console.log("Login enviado: ", formData);
+    alert("Login realizado com sucesso!");
+    // Aqui você pode implementar lógica de autenticação.
+  };
+
+  const handleForgotPassword = () => {
+    alert("Funcionalidade de recuperação de senha ainda não implementada!");
+    // Aqui você poderia redirecionar para uma página de recuperação de senha.
   };
 
   return (
     <div>
-      <h2>Cadastro de Usuário</h2>
+      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Nome Completo:</label>
+          <label>Usuário:</label>
           <input
             type="text"
-            name="nomeCompleto"
-            value={formData.nomeCompleto}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Telefone:</label>
-          <input
-            type="tel"
-            name="telefone"
-            value={formData.telefone}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Nome do Gato:</label>
-          <input
-            type="text"
-            name="nomeGato"
-            value={formData.nomeGato}
+            name="usuario"
+            value={formData.usuario}
             onChange={handleChange}
             required
           />
@@ -86,10 +51,11 @@ function Entrar() {
             required
           />
         </div>
-        <button type="submit">Cadastrar</button>
+        <button type="submit">Entrar</button>
       </form>
+      <button onClick={handleForgotPassword}>Esqueceu a senha?</button>
     </div>
   );
 }
 
-export default Entrar;
+export default LoginPage;
