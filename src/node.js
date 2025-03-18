@@ -17,11 +17,11 @@ const mysql=require('mysql');
 const { use } = require("react");
 const { log } = require("console");
 
-const app=express();
+const server=express();
 const port=8080;
 
 //Middlewaew para analisar o corpo das requisções
-app.use(express.json());
+server.use(express.json());
 
 //Configuração da conexão com o Mysql
 const db=mysql.createConnection({
@@ -41,7 +41,7 @@ db.connect((err)=>{
 });
 
 //Rota para obter todos os usuários 
-app.get('/usuarios',(req,res)=>{
+server.get('/usuarios',(req,res)=>{
     db.query('SELECT * FROM usuarios', (err,results)=>{
         if(err){
             res.status(500).send('Erro ao consultar banco de dados')
@@ -52,7 +52,7 @@ app.get('/usuarios',(req,res)=>{
 });
 
 //Rota para adicionar um usuário 
-app.post('/usuarios',(req,res)=>{
+server.post('/usuarios',(req,res)=>{
     const{nome,email}=req.body;
     const query='INSERT INTO usuario (nome,email) VALUES(?,?)';
 
@@ -66,7 +66,7 @@ app.post('/usuarios',(req,res)=>{
 });
 
 //Rota para editar usuário 
-app.put('/usuarios/:id', (req, res) => {
+server.put('/usuarios/:id', (req, res) => {
     const { id } = req.params;
     const { nome, email } = req.body;
     const query = 'UPDATE usuarios SET nome = ?, email = ? WHERE id = ?';
@@ -83,7 +83,7 @@ app.put('/usuarios/:id', (req, res) => {
 });
 
 // Rota para excluir o usuário 
-app.delete('/usuarios/:id', (req, res) => {
+server.delete('/usuarios/:id', (req, res) => {
     const { id } = req.params;
     const query = 'DELETE FROM usuarios WHERE id = ?';
 
@@ -99,7 +99,7 @@ app.delete('/usuarios/:id', (req, res) => {
 });
 
 //Iniciar o servidor
-app.listen(port,()=>{
+server.listen(port,()=>{
     console.log('Servidor rodando em http://localhost:${port}');
 });
 

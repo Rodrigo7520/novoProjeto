@@ -1,20 +1,7 @@
-/* Reset geral */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Garante que o padding não afete o tamanho total dos elementos */
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4; /* Cor de fundo para o site */
-  color: #333; /* Texto padrão */
-}
-
-/* Header */
+* Header */
 header {
-  background-color: #8d3272;
-  color: #f8c3de;
+  background-color: #8d3272; /* Cor de fundo do cabeçalho */
+  color: #f8c3de; /* Cor do texto */
   padding: 20px;
   text-align: center;
 }
@@ -27,22 +14,25 @@ header img {
 
 header h2 {
   font-size: 2.5rem;
+  margin: 10px 0;
 }
 
 header p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 10px;
 }
 
 /* Navegação */
 nav {
-  background-color: #f8ff97;
+  background-color: #8d3272;  /* Cor do fundo do menu */
   padding: 10px 0;
+  text-align: center;
 }
 
 nav ul {
   list-style: none;
-  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
@@ -58,79 +48,121 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #8d3272;
+  color: #f8ff97;  /* Cor amarela quando o mouse passa */
   text-decoration: underline;
 }
 
 /* Main (Conteúdo principal) */
 main {
-  padding: 20px;
-  background-color: #f4f4f4;
+  padding: 30px;
+  background-color: #fff3f8;  /* Fundo suave para o conteúdo */
 }
 
-/*main h2 {
+main h3 {
+  text-align: left;
   font-size: 2rem;
-  margin-top: 20px;
+  color: #8d3272;
+  margin-bottom: 20px;
 }
 
 main p {
-  font-size: 1.2rem;
-  line-height: 1.5;
-}*?
-
-/* Carousel */
-.carousel {
-  margin: 20px auto;
-  max-width: 800px; /* Centralizar e limitar a largura */
-  border-radius: 10px; /* Cantos arredondados */
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  font-size: 1.1rem;
+  color: #5a3a45;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.carousel img {
-  width: 100%;
-  height: auto;
+/* Service description */
+section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1); /* Faz os controles ficarem brancos para melhor visibilidade */
+section h3 {
+  font-size: 1.8rem;
+  color: #8d3272;
+  margin-bottom: 15px;
+}
+
+section p {
+  font-size: 1.1rem;
+  color: #5a3a45;
+  margin-top: 10px;
 }
 
 /* Footer */
 footer {
-  background-color: #e2e18d;
-  padding: 20px 0;
+  background-color: #8d3272;  /* Cor de fundo igual ao header */
+  color: #f8c3de;  /* Cor do texto igual ao header */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
-  color: #333;
-  position: fixed; /* Fixa o footer no final da página */
-  width: 100%;
-  bottom: 0;
 }
 
-footer ul {
+footer nav {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+footer nav ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 10px;
+  margin: 0;
+  display: flex;
 }
 
-footer ul li {
-  display: inline-block;
-  margin: 0 10px;
+footer nav ul li {
+  margin: 0 15px;
 }
 
-footer ul li a {
-  color: #8d3272;
+footer nav ul li a {
+  color: #f8c3de;  /* Cor dos links igual ao texto no header */
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
-footer ul li a:hover {
-  color: #eb56b9;
+footer nav ul li a:hover {
+  color: #f8ff97;  /* Amarelo quando passa o mouse */
+  text-decoration: underline;
 }
 
-footer p {
-  font-size: 0.9rem;
-  margin-top: 5px;
+footer div p {
+  background-color: #f8ff97;  /* Cor de fundo amarela */
+  color: #8d3272;  /* Cor do texto roxa */
+  font-size: 1rem;
+  margin-top: 15px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  footer nav ul li {
+      display: block;
+      margin: 10px 0;
+  }
+
+  main h3 {
+      font-size: 1.6rem;
+  }
+
+  main p {
+      font-size: 1rem;
+  }
+
+  header h2, footer div p {
+      font-size: 1.5rem;
+  }
+
+  .carousel-inner img {
+      height: auto;
+  }
 }

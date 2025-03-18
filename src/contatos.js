@@ -23,30 +23,40 @@ function Header() {
         alt="Logo Ronroninha Cat Sitter" 
         style={{ width: '100px', height: 'auto' }} 
       />
-
       <h2>Ronroninha Cat Sitter</h2>
       <p>SERVIÇO OFERECIDO HÁ 10 ANOS EM PORTO ALEGRE</p>
     </header>
   );
 }
+
 // Componente Nav {menu de navegação}
 function Nav() {
   return (
     <nav>
       <ul>
-        <li><a href="./pages/Homepages.js">Home</a></li>
-        <li><a href="./src/sobreNos.js">Sobre nos</a></li>
-        <li><a href="./src/Contato.js">Contato</a></li>
-        <li><a href="./src/cadastroUsusario.js">Entrar</a></li>
+        <li><Link to="/">Home</Link></li> {/* Usando o Link do react-router-dom */}
+        <li><Link to="/sobreNos.js">Sobre nós</Link></li>
+        <li><Link to="/contatos.js">Contato</Link></li>
+        <li><Link to="/cadastroUsuario.js">Cadastro</Link></li>
+        <li><Link to="/entrar.js">Entrar</Link></li>
       </ul>
     </nav>
   );
 }
 
-// Componente Main {conteúdo principal}
 function Main() {
-    return (
-      <main>
+  return (
+    <main>
+      <Carousel />
+      <Map />
+    </main>
+  );
+}
+
+// Componente Main {conteúdo principal}
+function Carousel() {
+  return (
+    <main>
       <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
         <ol className="carousel-indicators">
           <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active"></li>
@@ -73,38 +83,66 @@ function Main() {
           <span className="visually-hidden">Next</span>
         </a>
       </div>
-    
-  
-        {/* Informações adicionais */}
-        <div className="info-contato">
-          <p><strong>@ronroninha.catshop</strong></p>
-          <p><strong>Telefone:</strong> (51) 99965-3534</p>
-          <p><strong>Email:</strong> ronroninha.catshop@gmail.com</p>
-          <p><strong>Horário:</strong> Terça a Sábado | 9:30 - 18:30</p>
-          <p><strong>Localização:</strong> Felipe Camarão, 335 | Porto Alegre - RS</p>
-        </div>
-      </main>
-    );
-  }
-  
+    </main>
+  );
+}
+
+//Componente Main {conteúdo principal}
+function Map() {
+  return (
+    <main className="container py-5">
+      <h3 className="text-center mb-4">Entre em Contato Conosco!</h3>
+
+      {/* Informações adicionais */}
+      <div className="info-contato card p-4 shadow-sm mb-5">
+        <p><strong>@ronroninha.catshop</strong></p>
+        <p><strong>Telefone:</strong> (51) 99965-3534</p>
+        <p><strong>Email:</strong> <a href="mailto:ronroninha.catshop@gmail.com">ronroninha.catshop@gmail.com</a></p>
+        <p><strong>Horário:</strong> Terça a Sábado | 9:30 - 18:30</p>
+        <p><strong>Localização:</strong> Felipe Camarão, 335 | Porto Alegre - RS</p>
+      </div>
+
+      {/* Google Maps - Endereço da loja */}
+      <div className="google-map mb-5">
+        <h4>Encontre-nos no Google Maps:</h4>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.378236265076!2d-51.222477084409115!3d-30.047410557134705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978fe407980f9%3A0x3e2d325bfaa13242!2sFelipe%20Camar%C3%A3o%2C%20335%2C%20Porto%20Alegre%20-%20RS!5e0!3m2!1spt-BR!2sbr!4v1681792453623!5m2!1spt-BR!2sbr"
+          width="100%" height="450" style={{ border: 0 }} allowFullScreen="" loading="lazy" />
+      </div>
+    </main>
+  );
+}       
 
 // Componente Footer
 function Footer() {
   return (
     <div>
-      {/* Links da barra de navegação */}
-      <ul>
-        <li><a href="./HomePage.js">Loja</a></li>
-        <li><a href="./sobreNos.js">Sobre</a></li>
-        <li><a href="#Politica">Política da Loja</a></li>
-        <li><a href="#Contato">Contato</a></li>
-      </ul>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/sobreNos.js">Sobre nós</Link></li>
+          <li><Link to="/politicaLoja.js">Politica da Loja</Link></li>
+          <li><Link to="/contatos.js"></Link></li>
+        </ul>
+      </nav>
 
-      {/* Direitos autorais */}
       <div>
         <p>@ 2025 por Ronroninha Cat Shop CNPJ 37.848.640/0001-66</p>
       </div>
     </div>
+  );
+}
+
+// Definição das Rotas
+function AppRoutes() {
+  return (
+    <Routes> {/* Substitua Switch por Routes */}
+      <Route path="/" element={<Homepages />} />
+      <Route path="/sobreNos.js" element={<SobreNos />} />
+      <Route path="/contatos.js" element={<Contatos />} />
+      <Route path="/cadastroUsuario.js" element={<CadastroUsuario />} />
+      <Route path="/politicaLoja.js" element={<PoliticaLoja />} />
+    </Routes>
   );
 }
 

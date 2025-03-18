@@ -24,7 +24,6 @@ function Header() {
         alt="Logo Ronroninha Cat Sitter" 
         style={{ width: '100px', height: 'auto' }} 
       />
-
       <h2>Ronroninha Cat Sitter</h2>
       <p>SERVIÇO OFERECIDO HÁ 10 ANOS EM PORTO ALEGRE</p>
     </header>
@@ -36,14 +35,15 @@ function Nav() {
   return (
     <nav>
       <ul>
-          <li><a href="/pages/Homepages.js">Home</a></li>
-          <li><a href="/src/sobreNos.js">Sobre nos</a></li>
-          <li><a href="/src/Contato.js">Contato</a></li>
-          <li><a href="/src/cadastroUsusario.js">Entrar</a></li>
+        <li><Link to="/">Home</Link></li> {/* Usando o Link do react-router-dom */}
+        <li><Link to="/sobreNos.js">Sobre nós</Link></li>
+        <li><Link to="/contatos.js">Contato</Link></li>
+        <li><Link to="/cadastroUsuario.js">Entrar</Link></li>
       </ul>
     </nav>
   );
 }
+
 // Componente Main {conteúdo principal}
 function Main() {
   return (
@@ -109,19 +109,32 @@ function Main() {
 function Footer() {
   return (
     <div>
-      {/* Links da barra de navegação */}
-      <ul>
-        <li><a href="/pages/Homepages.js">Home</a></li>
-        <li><a href="/src/sobreNos.js">Sobre nos</a></li>
-        <li><a href="/src/Contato.js">Contato</a></li>
-        <li><a href="/src/cadastroUsusario.js">Entrar</a></li>
-      </ul>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/sobreNos.js">Sobre nós</Link></li>
+          <li><Link to="/politicaLoja.js">Politica da Loja</Link></li>
+          <li><Link to="/contatos.js">Contatos</Link></li>
+        </ul>
+      </nav>
 
-      {/* Direitos autorais */}
       <div>
         <p>@ 2025 por Ronroninha Cat Shop CNPJ 37.848.640/0001-66</p>
       </div>
     </div>
+  );
+}
+
+// Definição das Rotas
+function AppRoutes() {
+  return (
+    <Routes> {/* Substitua Switch por Routes */}
+      <Route path="/" element={<Homepages />} />
+      <Route path="/sobreNos.js" element={<SobreNos />} />
+      <Route path="/contatos.js" element={<Contatos />} />
+      <Route path="/cadastroUsuario.js" element={<CadastroUsuario />} />
+      <Route path="/politicaLoja.js" element={<PoliticaLoja />} />
+    </Routes>
   );
 }
 

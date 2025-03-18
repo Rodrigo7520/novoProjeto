@@ -1,154 +1,203 @@
-/* homePage.css */
-body {
-  font-family: Arial, sans-serif;
+/* Reset geral */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
+  box-sizing: border-box; /* Garante que o padding não afeta o tamanho total dos elementos */
 }
 
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Cor de fundo para o site */
+  color: #606649; /* Texto padrão */
 }
 
-/* Header */
+/* Cabeçalho */
 header {
-  text-align: center;
+  background-color: #8d3272; /* Cor do fundo do cabeçalho */
+  color: #f8c3de; /* Cor do texto */
   padding: 20px;
-  background-color: #ffe6e6;
-  border-bottom: 2px solid #ff9999;
+  text-align: center;
 }
 
 header img {
-  display: block;
-  margin: 0 auto 10px;
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 header h2 {
-  font-size: 24px;
-  color: #ff3333;
+  font-size: 2.5rem;
+  margin: 10px 0;
 }
 
 header p {
-  font-size: 14px;
-  color: #555;
+  font-size: 1.1rem;
+  margin-top: 10px;
 }
 
-/* Menu de Navegação */
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
+/* Navegação */
+nav {
+  background-color: #8d3272; /* Cor do fundo do menu */
   padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
-  background-color: #ffcccc;
 }
 
 nav ul li {
+  display: inline-block;
   margin: 0 15px;
 }
 
 nav ul li a {
+  color: #eb56b9;
   text-decoration: none;
-  font-weight: bold;
-  color: #333;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ff3333;
+  color: #f8ff97; /* Cor amarela quando o mouse passa */
+  text-decoration: underline;
 }
 
-/* Main */
+/* Main (Conteúdo principal) */
 main {
-  padding: 30px 15px;
+  padding: 30px;
+  background-color: #fff3f8; /* Fundo suave para o conteúdo */
 }
 
-main .carousel {
+main h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #8d3272;
   margin-bottom: 20px;
 }
 
-main .carousel-indicators li {
-  background-color: #ff9999;
+/* Carrossel */
+.carousel {
+  margin: 20px auto;
+  max-width: 800px; /* Centralizar e limitar a largura */
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-main .carousel-item img {
-  max-height: 400px;
-  object-fit: cover;
+.carousel-inner img {
+  width: 100%;
+  height: auto;
 }
 
-/* Section de Cards */
-.cards-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  max-width: 900px;
-  margin: 0 auto;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Faz os controles ficarem brancos para melhor visibilidade */
+}
+
+/* Texto */
+.service-description {
+  background-color: #fff;
   padding: 20px;
-}
-
-.cards-section .card {
-  background-color: #ffffff;
-  padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.cards-section .card h3 {
-  color: #ff3333;
-  margin-bottom: 10px;
+.service-description h3 {
+  font-size: 1.8rem;
+  color: #8d3272;
 }
 
-.cards-section .card p {
-  font-size: 14px;
-  color: #555;
-}
-
-.cards-section .btn-orcamento {
-  display: inline-block;
-  background-color: #ff3333;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
+.service-description p {
+  font-size: 1.1rem;
+  color: #5a3a45;
   margin-top: 10px;
 }
 
-.cards-section .btn-orcamento:hover {
-  background-color: #cc0000;
-}
-
-/* Footer */
+/* Rodapé */
 footer {
+  background-color: #8d3272; /* Cor de fundo igual ao cabeçalho */
+  color: #f8c3de; /* Cor do texto igual ao cabeçalho */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
-  padding: 10px;
-  background-color: #ffcccc;
-  border-top: 2px solid #ff9999;
-  font-size: 14px;
-  color: #555;
 }
 
-footer ul {
+footer nav {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+footer nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
 }
 
-footer ul li {
-  margin: 0 10px;
+footer nav ul li {
+  margin: 0 15px;
 }
 
-footer ul li a {
+footer nav ul li a {
+  color: #f8c3de;
   text-decoration: none;
-  color: #333;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
-footer ul li a:hover {
-  color: #ff3333;
+footer nav ul li a:hover {
+  color: #f8ff97; /* Amarelo quando passa o mouse */
+  text-decoration: underline;
+}
+
+footer .footer-images {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer .footer-images img {
+  margin-left: 10px;
+  width: 50px;
+  height: auto;
+}
+
+footer div p {
+  background-color: #f8ff97; /* Cor de fundo amarelo */
+  color: #8d3272; /* Cor do texto roxo */
+  font-size: 1rem;
+  margin-top: 15px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Resposta */
+@media (max-width: 768px) {
+  footer nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  header h2,
+  footer div p {
+    font-size: 1.5rem;
+  }
+
+  .carousel-inner img {
+    height: auto;
+  }
+
+  main h2 {
+    font-size: 1.6rem;
+  }
 }

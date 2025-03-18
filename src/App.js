@@ -1,15 +1,17 @@
 import React from 'react';
+import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Homepages from './pages/Homepages';
 import Contatos from './contatos';
 import SobreNos from './sobreNos';
 import PoliticaLoja from './politicaLoja';
 import CadastroUsuario from './cadastroUsuario';
+import Login from './login';
 
 // Componente Principal App
 function App() {
   return (
-    <Router> {/* Envolva o conteúdo com o Router */}
+    <Router>
       <div className="App">
         <Header />
         <Nav />
@@ -39,10 +41,11 @@ function Nav() {
   return (
     <nav>
       <ul>
-        <li><Link to="/">Home</Link></li> {/* Usando o Link do react-router-dom */}
+        <li><Link to="/">Home</Link></li>
         <li><Link to="/sobreNos.js">Sobre nós</Link></li>
         <li><Link to="/contatos.js">Contato</Link></li>
-        <li><Link to="/cadastroUsuario.js">Entrar</Link></li>
+        <li><Link to="/cadastroUsuario.js">Cadastro</Link></li>
+        <li><Link to="/login.js">Entrar</Link></li>
       </ul>
     </nav>
   );
@@ -78,34 +81,50 @@ function Main() {
           <span className="visually-hidden">Next</span>
         </a>
       </div>
+
+      <section className="service-description">
+        <h3>Cat Sitter</h3>
+        <p>SERVIÇO OFERECIDO HÁ 10 ANOS EM PORTO ALEGRE E AGORA DISPONÍVEL TAMBÉM NA REGIÃO METROPOLITANA E LITORAL NORTE DO RS!</p>
+        <p>
+          É uma babá de gatos que cuida do(s) seu(s) filhote(s) quando você não tem tempo ou precisa viajar.
+          Atendemos na sua casa, com a proposta de interferir o mínimo possível na rotina de cada gatinho,
+          levando brinquedos para exercitá-lo(s), além de muitos mimos e amor. Toda a equipe é de extrema
+          confiança da fundadora da Ronroninha, treinadas para atender com eficiência e conhecimento todos os nossos clientes.
+        </p>
+      </section>
     </main>
   );
 }
 
-// Componente Footer
+// Footer
 function Footer() {
   return (
-    <div>
+    <footer>
       <nav>
         <ul>
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/homePage.js">Home</Link></li>
           <li><Link to="/sobreNos.js">Sobre nós</Link></li>
+          <li><Link to="/politicaLoja.js">Política da Loja</Link></li>
           <li><Link to="/contatos.js">Contato</Link></li>
-          <li><Link to="/cadastroUsuario.js">Entrar</Link></li>
         </ul>
       </nav>
+
+      <div className="footer-images">
+        <img src="https://static.wixstatic.com/media/e17308_10816183451746eb9c410e66a4111bd0~mv2.png/v1/fill/w_111,h_83,al_c,q_85,enc_avif,quality_auto/Site-Ronroninha-logo-catshop-rodape.png" alt="Imagem 1" />
+        <img src="https://static.wixstatic.com/media/e17308_f1256b17c4f748ba988b1f7975eee6be~mv2.png/v1/fill/w_164,h_83,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Site-Ronroninha-logo-catsitter-rodape2.png" alt="Imagem 2" />
+      </div>
 
       <div>
         <p>@ 2025 por Ronroninha Cat Shop CNPJ 37.848.640/0001-66</p>
       </div>
-    </div>
+    </footer>
   );
 }
 
 // Definição das Rotas
 function AppRoutes() {
   return (
-    <Routes> {/* Substitua Switch por Routes */}
+    <Routes>
       <Route path="/" element={<Homepages />} />
       <Route path="/sobreNos.js" element={<SobreNos />} />
       <Route path="/contatos.js" element={<Contatos />} />
