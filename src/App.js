@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Homepages from './pages/Homepages';
+import Home from './Home';
 import Contatos from './contatos';
 import SobreNos from './sobreNos';
 import PoliticaLoja from './politicaLoja';
@@ -15,6 +15,7 @@ function App() {
       <div className="App">
         <Header />
         <Nav />
+        <AppRoutes />
         <Main />
         <Footer />
       </div>
@@ -41,15 +42,16 @@ function Nav() {
   return (
     <nav>
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/sobreNos.js">Sobre nós</Link></li>
-        <li><Link to="/contatos.js">Contato</Link></li>
-        <li><Link to="/cadastroUsuario.js">Cadastro</Link></li>
-        <li><Link to="/login.js">Entrar</Link></li>
+        <li><Link to="/home">Home</Link></li>
+        <li><Link to="/sobreNos">Sobre nós</Link></li>
+        <li><Link to="/contatos">Contato</Link></li>
+        <li><Link to="/cadastroUsuario">Cadastro</Link></li>
+        <li><Link to="/login">Entrar</Link></li>
       </ul>
     </nav>
   );
 }
+
 
 // Componente Main {conteúdo principal}
 function Main() {
@@ -102,7 +104,7 @@ function Footer() {
     <footer>
       <nav>
         <ul>
-          <li><Link to="/homePage.js">Home</Link></li>
+          <li><Link to="/Home.js">Home</Link></li>
           <li><Link to="/sobreNos.js">Sobre nós</Link></li>
           <li><Link to="/politicaLoja.js">Política da Loja</Link></li>
           <li><Link to="/contatos.js">Contato</Link></li>
@@ -125,7 +127,7 @@ function Footer() {
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Homepages />} />
+      <Route path="/Home.js" element={<Home />} />
       <Route path="/sobreNos.js" element={<SobreNos />} />
       <Route path="/contatos.js" element={<Contatos />} />
       <Route path="/cadastroUsuario.js" element={<CadastroUsuario />} />

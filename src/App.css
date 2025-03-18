@@ -1,7 +1,7 @@
 * Header */
 header {
   background-color: #8d3272; /* Cor de fundo do cabeçalho */
-  color: #f8c3de; /* Cor do texto */
+  color: #9b1e63; /* Cor do texto */
   padding: 20px;
   text-align: center;
 }
@@ -41,9 +41,6 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #eb56b9;
-  text-decoration: none;
-  font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 

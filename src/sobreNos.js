@@ -2,7 +2,11 @@ import './sobreNos.css'; // Para o estilo da aplicação sobreNos.css
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importando o JavaScript do Bootstrap
-//import HomePage from '../pages/Homepages';
+import './politicaLoja';
+import './contatos';
+import './Home';
+import './cadastroUsuario';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 // Componente Principal App
 function sobreNos() {
@@ -35,7 +39,7 @@ function Nav() {
   return (
     <nav>
       <ul>
-        <li><Link to="/">Home</Link></li> {/* Usando o Link do react-router-dom */}
+        <li><Link to="/Home.js">Home</Link></li> {/* Usando o Link do react-router-dom */}
         <li><Link to="/sobreNos.js">Sobre nós</Link></li>
         <li><Link to="/contatos.js">Contato</Link></li>
         <li><Link to="/cadastroUsuario.js">Entrar</Link></li>
@@ -111,7 +115,7 @@ function Footer() {
     <div>
       <nav>
         <ul>
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/Home.js">Home</Link></li>
           <li><Link to="/sobreNos.js">Sobre nós</Link></li>
           <li><Link to="/politicaLoja.js">Politica da Loja</Link></li>
           <li><Link to="/contatos.js">Contatos</Link></li>
@@ -120,21 +124,8 @@ function Footer() {
 
       <div>
         <p>@ 2025 por Ronroninha Cat Shop CNPJ 37.848.640/0001-66</p>
-      </div>
+      </div> 
     </div>
-  );
-}
-
-// Definição das Rotas
-function AppRoutes() {
-  return (
-    <Routes> {/* Substitua Switch por Routes */}
-      <Route path="/" element={<Homepages />} />
-      <Route path="/sobreNos.js" element={<SobreNos />} />
-      <Route path="/contatos.js" element={<Contatos />} />
-      <Route path="/cadastroUsuario.js" element={<CadastroUsuario />} />
-      <Route path="/politicaLoja.js" element={<PoliticaLoja />} />
-    </Routes>
   );
 }
 

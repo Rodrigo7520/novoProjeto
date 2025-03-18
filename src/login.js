@@ -1,13 +1,19 @@
-// src/LoginPage.js
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Importando o Link do React Router
-import"/.login.css";
+import { useNavigate } from 'react-router-dom'; // For navigation
+import { Link } from 'react-router-dom'; // For the Link component
+import './login.css';
+import './sobreNos';
+import './Home';
+import './politicaLoja';
+import './cadastroUsuario';
 
-function LoginPage() {
+function Login() {
   const [formData, setFormData] = useState({
     usuario: "",
     senha: ""
   });
+
+  const navigate = useNavigate(); // Use the hook to navigate
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,8 +38,8 @@ function LoginPage() {
     if (usuarioEncontrado) {
       console.log("Login enviado: ", formData);
       alert("Login realizado com sucesso!");
-      // Redirecionar para a página de dashboard após login
-      history.push("/homePage");
+      // Use navigate to redirect to the homePage route
+      navigate("/home");
     } else {
       alert("Usuário ou senha inválidos. Tente novamente.");
     }
@@ -41,8 +47,8 @@ function LoginPage() {
 
   const handleForgotPassword = () => {
     alert("Funcionalidade de recuperação de senha ainda não implementada!");
-    // Redirecionar para a página de recuperação de senha
-    history.push("/recuperarSenha");
+    // Use navigate to redirect to the password recovery route
+    navigate("/recuperarSenha");
   };
 
   return (
@@ -61,7 +67,7 @@ function LoginPage() {
       {/* Nav */}
       <nav>
         <ul>
-          <li><Link to="/App.js">Home</Link></li>
+          <li><Link to="/Home.js">Home</Link></li>
           <li><Link to="/sobreNos">Sobre nós</Link></li>
           <li><Link to="/contatos">Contato</Link></li>
         </ul>
@@ -101,7 +107,7 @@ function LoginPage() {
         {/* Navegação à esquerda */}
         <nav>
           <ul>
-            <li><Link to="/homePage">Home</Link></li>
+            <li><Link to="/Home">Home</Link></li>
             <li><Link to="/sobreNos">Sobre nós</Link></li>
             <li><Link to="/politicaLoja">Política da Loja</Link></li>
             <li><Link to="/contatos">Contato</Link></li>
@@ -129,4 +135,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default Login;

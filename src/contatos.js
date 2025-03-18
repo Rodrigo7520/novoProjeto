@@ -2,6 +2,13 @@ import './contatos.css'; // Para o estilo da aplicação
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importando o JavaScript do Bootstrap
+import './sobreNos';
+import './Home';
+import './politicaLoja';
+import './cadastroUsuario';
+import './login';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
 // Componente Principal App
 
 function Contatos() {
@@ -34,7 +41,7 @@ function Nav() {
   return (
     <nav>
       <ul>
-        <li><Link to="/">Home</Link></li> {/* Usando o Link do react-router-dom */}
+        <li><Link to="/Home.js">Home</Link></li> {/* Usando o Link do react-router-dom */}
         <li><Link to="/sobreNos.js">Sobre nós</Link></li>
         <li><Link to="/contatos.js">Contato</Link></li>
         <li><Link to="/cadastroUsuario.js">Cadastro</Link></li>
@@ -119,7 +126,7 @@ function Footer() {
     <div>
       <nav>
         <ul>
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/Home.js">Home</Link></li>
           <li><Link to="/sobreNos.js">Sobre nós</Link></li>
           <li><Link to="/politicaLoja.js">Politica da Loja</Link></li>
           <li><Link to="/contatos.js"></Link></li>
@@ -133,17 +140,5 @@ function Footer() {
   );
 }
 
-// Definição das Rotas
-function AppRoutes() {
-  return (
-    <Routes> {/* Substitua Switch por Routes */}
-      <Route path="/" element={<Homepages />} />
-      <Route path="/sobreNos.js" element={<SobreNos />} />
-      <Route path="/contatos.js" element={<Contatos />} />
-      <Route path="/cadastroUsuario.js" element={<CadastroUsuario />} />
-      <Route path="/politicaLoja.js" element={<PoliticaLoja />} />
-    </Routes>
-  );
-}
 
 export default Contatos;

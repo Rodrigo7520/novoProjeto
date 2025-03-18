@@ -1,13 +1,15 @@
-// src/HomePage.js
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importando o JavaScript do Bootstrap
-import { Link } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
-import Homepages from "homePage.css";
-import Orcamento from "./pages/Orcamento"; // Certifique-se de importar o componente de Orçamento
+import './Home.css'
+import './sobreNos';
+import './contatos';
+import './politicaLoja';
+import './cadastroUsuario';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Login from './login'; // Mantenha essa importação, se necessário
 
-function Homepages() {
+function Home() {
   return (
     <div className="App">
       <Header />
@@ -37,10 +39,10 @@ function Nav() {
   return (
     <nav>
       <ul>
-        <li><Link to="/">Home</Link></li> {/* Usando o Link do react-router-dom */}
-        <li><Link to="/sobreNos.js">Sobre nós</Link></li>
-        <li><Link to="/contatos.js">Contato</Link></li>
-        <li><Link to="/cadastroUsuario.js">Entrar</Link></li>
+        <li><Link to="/politicaLoja">Politica da Loja</Link></li>
+        <li><Link to="/sobreNos">Sobre nós</Link></li>
+        <li><Link to="/contatos">Contato</Link></li>
+        <li><Link to="/cadastroUsuario">Entrar</Link></li>
       </ul>
     </nav>
   );
@@ -159,10 +161,10 @@ function Footer() {
     <div>
       <nav>
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/sobreNos.js">Sobre nós</Link></li>
-          <li><Link to="/politicaLoja.js">Politica da Loja</Link></li>
-          <li><Link to="/contatos.js">Contatos</Link></li>
+          <li><Link to="/Home">Home</Link></li>
+          <li><Link to="/sobreNos">Sobre nós</Link></li>
+          <li><Link to="/politicaLoja">Politica da Loja</Link></li>
+          <li><Link to="/contatos">Contatos</Link></li>
         </ul>
       </nav>
 
@@ -172,17 +174,4 @@ function Footer() {
     </div>
   );
 }
-
-// Definição das Rotas
-function AppRoutes() {
-  return (
-    <Routes> {/* Substitua Switch por Routes */}
-      <Route path="/" element={<Homepages />} />
-      <Route path="/sobreNos.js" element={<SobreNos />} />
-      <Route path="/contatos.js" element={<Contatos />} />
-      <Route path="/cadastroUsuario.js" element={<CadastroUsuario />} />
-      <Route path="/politicaLoja.js" element={<PoliticaLoja />} />
-    </Routes>
-  );
-}
-export default Homepages;
+export default Home;
