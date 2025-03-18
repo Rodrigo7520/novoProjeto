@@ -43,7 +43,7 @@ function Nav() {
     <nav>
       <ul>
         <li><Link to="/home">Home</Link></li>
-        <li><Link to="/sobreNos">Sobre nós</Link></li>
+        <li><Link to="/sobreNos">Sobre Nós</Link></li>
         <li><Link to="/contatos">Contato</Link></li>
         <li><Link to="/cadastroUsuario">Cadastro</Link></li>
         <li><Link to="/login">Entrar</Link></li>
@@ -104,10 +104,10 @@ function Footer() {
     <footer>
       <nav>
         <ul>
-          <li><Link to="/Home.js">Home</Link></li>
-          <li><Link to="/sobreNos.js">Sobre nós</Link></li>
-          <li><Link to="/politicaLoja.js">Política da Loja</Link></li>
-          <li><Link to="/contatos.js">Contato</Link></li>
+          <li><Link to="/Home">Home</Link></li>
+          <li><Link to="/sobreNos">Sobre Nós</Link></li>
+          <li><Link to="/politicaLoja">Política da Loja</Link></li>
+          <li><Link to="/contatos">Contato</Link></li>
         </ul>
       </nav>
 
@@ -127,11 +127,11 @@ function Footer() {
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/Home.js" element={<Home />} />
-      <Route path="/sobreNos.js" element={<SobreNos />} />
-      <Route path="/contatos.js" element={<Contatos />} />
-      <Route path="/cadastroUsuario.js" element={<CadastroUsuario />} />
-      <Route path="/politicaLoja.js" element={<PoliticaLoja />} />
+      <Route path="/Home" element={<Home />} />
+      <Route path="/sobreNos" element={<SobreNos />} />
+      <Route path="/contatos" element={<Contatos />} />
+      <Route path="/cadastroUsuario" element={<CadastroUsuario />} />
+      <Route path="/politicaLoja" element={<PoliticaLoja />} />
     </Routes>
   );
 }

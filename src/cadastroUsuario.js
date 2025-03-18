@@ -4,12 +4,9 @@ import './sobreNos';
 import './contatos';
 import './politicaLoja';
 import './Home';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; 
 
-//import 'bootstrap/dist/css/bootstrap.min.css';
-//import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importando o JavaScript do Bootstrap
-
-// Componente Principal App
+// Componente principal
 function CadastroUsuario() {
   return (
     <div className="App">
@@ -21,13 +18,14 @@ function CadastroUsuario() {
   );
 }
 
+// Componente Header
 function Header() {
   return (
     <header>
-      <img 
-        src="https://static.wixstatic.com/media/e17308_c34ca378d92440e283f79f66e720e9fe~mv2.png/v1/fill/w_156,h_136,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Site-Ronroninha-logo_edited.png" 
-        alt="Logo Ronroninha Cat Sitter" 
-        style={{ width: '100px', height: 'auto' }} 
+      <img
+        src="https://static.wixstatic.com/media/e17308_c34ca378d92440e283f79f66e720e9fe~mv2.png/v1/fill/w_156,h_136,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Site-Ronroninha-logo_edited.png"
+        alt="Logo Ronroninha Cat Sitter"
+        style={{ width: '100px', height: 'auto' }}
       />
       <h2>Ronroninha Cat Sitter</h2>
       <p>SERVIÇO OFERECIDO HÁ 10 ANOS EM PORTO ALEGRE</p>
@@ -35,12 +33,12 @@ function Header() {
   );
 }
 
-// Componente Nav {menu de navegação}
+// Componente Nav (menu de navegação)
 function Nav() {
   return (
     <nav>
       <ul>
-        <li><Link to="/home.js">Home</Link></li> {/* Usando o Link do react-router-dom */}
+        <li><Link to="/home.js">Home</Link></li>
         <li><Link to="/sobreNos.js">Sobre nós</Link></li>
         <li><Link to="/contatos.js">Contato</Link></li>
         <li><Link to="/cadastroUsuario.js">Entrar</Link></li>
@@ -49,22 +47,19 @@ function Nav() {
   );
 }
 
-// Componente Main {conteúdo principal}
+// Componente Main (conteúdo principal)
 function Main() {
   const [formData, setFormData] = useState({
     nomeCompleto: "",
     email: "",
     telefone: "",
     nomeGato: "",
-    senha: ""
+    senha: "",
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+    const { nome, valor } = e.target;
+    setFormData({ ...formData, [nome]: valor });
   };
 
   const handleSubmit = (e) => {
@@ -76,7 +71,7 @@ function Main() {
       email: "",
       telefone: "",
       nomeGato: "",
-      senha: ""
+      senha: "",
     });
   };
 
@@ -95,7 +90,7 @@ function Main() {
           />
         </div>
         <div>
-          <label>Email:</label>
+          <label>E-mail:</label>
           <input
             type="email"
             name="email"
@@ -134,7 +129,7 @@ function Main() {
             required
           />
         </div>
-        <button type="submit">Cadastrar</button>
+        <button type="submit">Cadastro</button>
       </form>
     </main>
   );
@@ -143,20 +138,19 @@ function Main() {
 // Componente Footer
 function Footer() {
   return (
-    <div>
+    <footer>
       <nav>
         <ul>
           <li><Link to="/home.js">Home</Link></li>
           <li><Link to="/sobreNos.js">Sobre nós</Link></li>
-          <li><Link to="/politicaLoja.js">Politica da Loja</Link></li>
+          <li><Link to="/politicaLoja.js">Política da Loja</Link></li>
           <li><Link to="/contatos.js">Contatos</Link></li>
         </ul>
       </nav>
-
       <div>
         <p>@ 2025 por Ronroninha Cat Shop CNPJ 37.848.640/0001-66</p>
       </div>
-    </div>
+    </footer>
   );
 }
 

@@ -1,4 +1,5 @@
-import './contatos.css'; // Para o estilo da aplicação
+// Componente Principal App
+import './contatos.css'; // Importando o arquivo CSS para esta página
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importando o JavaScript do Bootstrap
@@ -10,7 +11,6 @@ import './login';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 // Componente Principal App
-
 function Contatos() {
   return (
     <div className="App">
@@ -22,6 +22,7 @@ function Contatos() {
   );
 }
 
+// Componente Header
 function Header() {
   return (
     <header>
@@ -36,21 +37,22 @@ function Header() {
   );
 }
 
-// Componente Nav {menu de navegação}
+// Componente Nav (menu de navegação)
 function Nav() {
   return (
     <nav>
       <ul>
-        <li><Link to="/Home.js">Home</Link></li> {/* Usando o Link do react-router-dom */}
-        <li><Link to="/sobreNos.js">Sobre nós</Link></li>
-        <li><Link to="/contatos.js">Contato</Link></li>
-        <li><Link to="/cadastroUsuario.js">Cadastro</Link></li>
-        <li><Link to="/entrar.js">Entrar</Link></li>
+        <li><Link to="/Home">Home</Link></li> 
+        <li><Link to="/sobreNos">Sobre nós</Link></li>
+        <li><Link to="/contatos">Contato</Link></li>
+        <li><Link to="/cadastroUsuario">Cadastro</Link></li>
+        <li><Link to="/entrar">Entrar</Link></li>
       </ul>
     </nav>
   );
 }
 
+// Componente Main (conteúdo principal)
 function Main() {
   return (
     <main>
@@ -60,41 +62,39 @@ function Main() {
   );
 }
 
-// Componente Main {conteúdo principal}
+// Componente Carousel
 function Carousel() {
   return (
-    <main>
-      <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-        <ol className="carousel-indicators">
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active"></li>
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-        </ol>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img className="d-block w-100" src="https://static.wixstatic.com/media/e17308_44001439ba344661b9487d7b4fc93d2f~mv2.png/v1/fill/w_980,h_370,al_c,q_90,enc_avif,quality_auto/e17308_44001439ba344661b9487d7b4fc93d2f~mv2.png" alt="Primeiro slide" />
-          </div>
-          <div className="carousel-item">
-            <img className="d-block w-100" src="https://static.wixstatic.com/media/e17308_ecac9b129462404a92de1b2ea143e515~mv2.png/v1/fill/w_980,h_370,al_c,q_90,enc_avif,quality_auto/e17308_ecac9b129462404a92de1b2ea143e515~mv2.png" alt="Segundo slide" />
-          </div>
-          <div className="carousel-item">
-            <img className="d-block w-100" src="https://static.wixstatic.com/media/e17308_e207574b08d34987a1d2c7aad856d42c~mv2.png/v1/fill/w_980,h_370,al_c,q_90,enc_avif,quality_auto/e17308_e207574b08d34987a1d2c7aad856d42c~mv2.png" alt="Terceiro slide" />
-          </div>
+    <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+      <ol className="carousel-indicators">
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+      </ol>
+      <div className="carousel-inner">
+        <div className="carousel-item active">
+          <img className="d-block w-100" src="https://static.wixstatic.com/media/e17308_44001439ba344661b9487d7b4fc93d2f~mv2.png/v1/fill/w_980,h_370,al_c,q_90,enc_avif,quality_auto/e17308_44001439ba344661b9487d7b4fc93d2f~mv2.png" alt="Primeiro slide" />
         </div>
-        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </a>
-        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </a>
+        <div className="carousel-item">
+          <img className="d-block w-100" src="https://static.wixstatic.com/media/e17308_ecac9b129462404a92de1b2ea143e515~mv2.png/v1/fill/w_980,h_370,al_c,q_90,enc_avif,quality_auto/e17308_ecac9b129462404a92de1b2ea143e515~mv2.png" alt="Segundo slide" />
+        </div>
+        <div className="carousel-item">
+          <img className="d-block w-100" src="https://static.wixstatic.com/media/e17308_e207574b08d34987a1d2c7aad856d42c~mv2.png/v1/fill/w_980,h_370,al_c,q_90,enc_avif,quality_auto/e17308_e207574b08d34987a1d2c7aad856d42c~mv2.png" alt="Terceiro slide" />
+        </div>
       </div>
-    </main>
+      <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
+      </a>
+      <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
+      </a>
+    </div>
   );
 }
 
-//Componente Main {conteúdo principal}
+// Componente Map (informações de contato e mapa)
 function Map() {
   return (
     <main className="container py-5">
@@ -109,7 +109,7 @@ function Map() {
         <p><strong>Localização:</strong> Felipe Camarão, 335 | Porto Alegre - RS</p>
       </div>
 
-      {/* Google Maps - Endereço da loja */}
+      {/* Google Maps */}
       <div className="google-map mb-5">
         <h4>Encontre-nos no Google Maps:</h4>
         <iframe
@@ -118,27 +118,26 @@ function Map() {
       </div>
     </main>
   );
-}       
+}
 
 // Componente Footer
 function Footer() {
   return (
-    <div>
+    <footer>
       <nav>
         <ul>
-          <li><Link to="/Home.js">Home</Link></li>
-          <li><Link to="/sobreNos.js">Sobre nós</Link></li>
-          <li><Link to="/politicaLoja.js">Politica da Loja</Link></li>
-          <li><Link to="/contatos.js"></Link></li>
+          <li><Link to="/Home">Home</Link></li>
+          <li><Link to="/sobreNos">Sobre nós</Link></li>
+          <li><Link to="/politicaLoja">Política da Loja</Link></li>
+          <li><Link to="/contatos">Contato</Link></li>
         </ul>
       </nav>
 
       <div>
         <p>@ 2025 por Ronroninha Cat Shop CNPJ 37.848.640/0001-66</p>
       </div>
-    </div>
+    </footer>
   );
 }
-
 
 export default Contatos;

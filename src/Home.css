@@ -1,15 +1,15 @@
-/* Reset geral */
+/* Reset geral 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Garante que o padding não afeta o tamanho total dos elementos */
+  box-sizing: border-box; /* Garante que o padding não afeta o tamanho total dos elementos *
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4; /* Cor de fundo para o site */
-  color: #606649; /* Texto padrão */
-}
+  background-color: #f4f4f4; /* Cor de fundo para o site 
+  color: #606649; Texto padrão 
+}*/
 
 /* Cabeçalho */
 header {
