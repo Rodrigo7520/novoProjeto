@@ -8,7 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4; /* Cor de fundo para o site */
-  color: #606649; /* Texto padrão */
+  color: yellow; /* Texto padrão */
 }
 
 /* Cabeçalho */
@@ -33,11 +33,12 @@ header h2 {
 header p {
   font-size: 1.1rem;
   margin-top: 10px;
+  color:#e9d876;
 }
 
 /* Navegação */
 nav {
-  background-color: #8d3272; /* Cor do fundo do menu */
+  background-color: #ece57d; /* Cor do fundo do menu */
   padding: 10px 0;
   text-align: center;
 }
@@ -51,10 +52,11 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin: 0 15px;
+  color: #e9d876;
 }
 
-nav ul li a {
-  color: #eb56b9;
+.a {
+  color: #e9d876;
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s ease;
@@ -118,7 +120,7 @@ main h2 {
 /* Rodapé */
 footer {
   background-color: #8d3272; /* Cor de fundo igual ao cabeçalho */
-  color: #f8c3de; /* Cor do texto igual ao cabeçalho */
+  color: yellow; /* Cor do texto igual ao cabeçalho */
   padding: 20px;
   display: flex;
   justify-content: space-between;

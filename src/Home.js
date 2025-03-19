@@ -39,7 +39,7 @@ function Nav() {
   return (
     <nav>
       <ul>
-        <li><Link to="/politicaLoja">Politica da Loja</Link></li>
+        <li><Link to="/politicaLoja" className="nav ul li">Politica da Loja</Link></li>
         <li><Link to="/sobreNos">Sobre nós</Link></li>
         <li><Link to="/contatos">Contato</Link></li>
         <li><Link to="/cadastroUsuario">Entrar</Link></li>

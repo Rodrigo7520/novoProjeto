@@ -32,7 +32,7 @@ function Header() {
         style={{ width: '100px', height: 'auto' }} 
       />
       <h2>Ronroninha Cat Sitter</h2>
-      <p>SERVIÇO OFERECIDO HÁ 10 ANOS EM PORTO ALEGRE</p>
+      <p className='header p'>SERVIÇO OFERECIDO HÁ 10 ANOS EM PORTO ALEGRE</p>
     </header>
   );
 }
