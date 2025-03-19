@@ -41,7 +41,7 @@ function Nav() {
         <li><Link to="/home.js">Home</Link></li>
         <li><Link to="/sobreNos.js">Sobre nós</Link></li>
         <li><Link to="/contatos.js">Contato</Link></li>
-        <li><Link to="/cadastroUsuario.js">Entrar</Link></li>
+        <li><Link to="/login">Entrar</Link></li>
       </ul>
     </nav>
   );
