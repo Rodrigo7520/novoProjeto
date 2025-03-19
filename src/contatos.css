@@ -75,10 +75,10 @@ main p {
   border-radius: 10px;
 }
 
-/* Rodapé */
+/* Footer */
 footer {
-  background-color: #8d3272;
-  color: #f8c3de;
+  background-color: #8d3272;  /* Cor de fundo igual ao header */
+  color: #f8c3de;  /* Cor do texto igual ao header */
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -104,20 +104,20 @@ footer nav ul li {
 }
 
 footer nav ul li a {
-  color: #8d3272;
+  color:  #8d3272;  /* Cor dos links igual ao texto no header */
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
 footer nav ul li a:hover {
-  color: #f8ff97;
+  color: #f8ff97;  /* Amarelo quando passa o mouse */
   text-decoration: underline;
 }
 
 footer div p {
-  background-color: #f8ff97;
-  color: #8d3272;
+  background-color: #f8ff97;  /* Cor de fundo amarela */
+  color: #8d3272;  /* Cor do texto roxa */
   font-size: 1rem;
   margin-top: 15px;
   font-weight: bold;
@@ -128,23 +128,23 @@ footer div p {
 /* Responsividade */
 @media (max-width: 768px) {
   footer nav ul li {
-    display: block;
-    margin: 10px 0;
+      display: block;
+      margin: 10px 0;
   }
 
   main h3 {
-    font-size: 1.6rem;
+      font-size: 1.6rem;
   }
 
   main p {
-    font-size: 1rem;
+      font-size: 1rem;
   }
 
   header h2, footer div p {
-    font-size: 1.5rem;
+      font-size: 1.5rem;
   }
 
   .carousel-inner img {
-    height: auto;
+      height: auto;
   }
 }
