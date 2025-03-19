@@ -19,6 +19,7 @@ header {
   header p {
     font-size: 1.1rem;
     margin-top: 10px;
+    color: #f8ff97;
   }
   
   /* Navegação Principal */
@@ -37,6 +38,7 @@ header {
   nav ul li {
     display: inline-block;
     margin: 0 15px;
+    color: #9b1e63;
   }
   
   nav ul li a {
