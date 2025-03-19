@@ -1,4 +1,4 @@
-* Header */
+/* Header */
 header {
   background-color: #8d3272; /* Cor de fundo do cabeçalho */
   color: #9b1e63; /* Cor do texto */
@@ -19,8 +19,8 @@ header h2 {
 
 header p {
   font-size: 1.1rem;
-  margin-top: 10px; 
-  color:#f8ff97;
+  margin-top: 10px;
+  color: #f8ff97;
 }
 
 /* Navegação */
@@ -39,6 +39,7 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin: 0 15px;
+  color: #9b1e63;
 }
 
 nav ul li a {
@@ -120,7 +121,7 @@ footer nav ul li {
 }
 
 footer nav ul li a {
-  color: #f8c3de;  /* Cor dos links igual ao texto no header */
+  color:  #8d3272;  /* Cor dos links igual ao texto no header */
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s ease;

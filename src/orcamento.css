@@ -93,11 +93,6 @@ header {
     box-sizing: border-box;
   }
   
-  form input[type="number"] {
-    -webkit-appearance: none;
-    -moz-appearance: textfield;
-  }
-  
   form button {
     background-color: #8d3272;
     color: #f8c3de;

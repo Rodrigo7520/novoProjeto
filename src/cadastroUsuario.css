@@ -1,148 +1,163 @@
-/* cadastroUsuario.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
-  }
-  
-  /* Header */
-  header {
-    text-align: center;
-    padding: 20px;
-    background-color: #ffe6e6;
-    border-bottom: 2px solid #ff9999;
-  }
-  
-  header img {
+/* Header */
+header {
+  background-color: #8d3272; /* Cor de fundo do cabeçalho */
+  color: #9b1e63; /* Cor do texto */
+  padding: 20px;
+  text-align: center; /* Corrigido de "alinhamento de texto" para "text-align" */
+}
+
+header img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  font-size: 2.5rem; /* Corrigido de "tamanho da fonte" para "font-size" */
+  margin: 10px 0;
+}
+
+header p {
+  font-size: 1.1rem; /* Corrigido de "tamanho da fonte" para "font-size" */
+  margin-top: 10px;
+  color: #f8ff97;
+}
+
+/* Navegação */
+nav {
+  background-color: #8d3272; /* Cor do fundo do menu */
+  padding: 10px 0;
+  text-align: center; /* Corrigido de "alinhamento de texto" para "text-align" */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+  color: #9b1e63;
+}
+
+nav ul li a {
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f8ff97; /* Cor amarela quando o mouse passa */
+  text-decoration: underline;
+}
+
+/* Main (Conteúdo principal) */
+main {
+  padding: 30px;
+  background-color: #fff3f8; /* Fundo suave para o conteúdo */
+}
+
+main h3 {
+  text-align: left;
+  font-size: 2rem;
+  color: #8d3272;
+  margin-bottom: 20px;
+}
+
+main p {
+  font-size: 1.1rem;
+  color: #5a3a45;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Descrição do serviço */
+section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+section h3 {
+  font-size: 1.8rem;
+  color: #8d3272;
+  margin-bottom: 15px;
+}
+
+section p {
+  font-size: 1.1rem;
+  color: #5a3a45;
+  margin-top: 10px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #8d3272; /* Cor de fundo igual ao header */
+  color: #f8c3de; /* Cor do texto igual ao header */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+footer nav {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+footer nav ul li {
+  margin: 0 15px;
+}
+
+footer nav ul li a {
+  color: #8d3272; /* Cor dos links igual ao texto no header */
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+  color: #f8ff97; /* Amarelo quando passa o mouse */
+  text-decoration: underline;
+}
+
+footer div p {
+  background-color: #f8ff97; /* Cor de fundo amarela */
+  color: #8d3272; /* Cor do texto roxa */
+  font-size: 1rem;
+  margin-top: 15px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  footer nav ul li {
     display: block;
-    margin: 0 auto 10px;
+    margin: 10px 0;
   }
-  
-  header h2 {
-    font-size: 24px;
-    color: #ff3333;
+  main h3 {
+    font-size: 1.6rem;
   }
-  
-  header p {
-    font-size: 14px;
-    color: #555;
+  main p {
+    font-size: 1rem;
   }
-  
-  /* Menu de Navegação */
-  nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 10px 0;
-    margin: 0;
-    background-color: #ffcccc;
+  header h2, footer div p {
+    font-size: 1.5rem;
   }
-  
-  nav ul li {
-    margin: 0 15px;
+  .carousel-inner img {
+    height: auto;
   }
-  
-  nav ul li a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  nav ul li a:hover {
-    color: #ff3333;
-  }
-  
-  /* Formulário de Cadastro */
-  main {
-    padding: 30px 15px;
-  }
-  
-  main h2 {
-    text-align: center;
-    color: #ff3333;
-    margin-bottom: 20px;
-  }
-  
-  main form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-  }
-  
-  main form div {
-    margin-bottom: 15px;
-  }
-  
-  main form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  main form input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  main form input:focus {
-    outline: none;
-    border-color: #ff6666;
-    box-shadow: 0 0 5px rgba(255, 102, 102, 0.5);
-  }
-  
-  main form button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #ff3333;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  main form button:hover {
-    background-color: #cc0000;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #ffcccc;
-    border-top: 2px solid #ff9999;
-    font-size: 14px;
-    color: #555;
-  }
-  
-  footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-  
-  footer ul li {
-    margin: 0 10px;
-  }
-  
-  footer ul li a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  footer ul li a:hover {
-    color: #ff3333;
-  }
-  
+}
