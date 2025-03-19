@@ -1,204 +1,214 @@
 /* Header */
 header {
-    background-color: #8d3272;  /* Cor de fundo do cabeçalho */
-    color: #f8c3de;  /* Cor do texto */
-    padding: 20px;
-    text-align: center;
-  }
-  
-  header img {
-    width: 100px;
-    height: auto;
-  }
-  
-  header h2 {
-    margin: 10px 0;
-    font-size: 2rem;
-  }
-  
-  header p {
-    font-size: 1.1rem;
-    margin-top: 10px;
-    color: #f8ff97;
-  }
-  
-  /* Navegação Principal */
-  nav {
-    background-color: #8d3272;  /* Cor do fundo do menu */
-    padding: 10px 0;
-    text-align: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-    color: #9b1e63;
-  }
-  
-  nav ul li a {
-    color: #f8c3de;  /* Cor dos links */
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: #f8ff97;  /* Cor amarela quando o mouse passa */
-    text-decoration: underline;
-  }
-  
-  /* Main */
-  main {
-    padding: 30px;
-    background-color: #fff3f8;  /* Fundo suave para o formulário */
-  }
-  
-  main h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #8d3272;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  form div {
-    margin-bottom: 15px;
-  }
-  
-  form label {
-    display: block;
-    font-size: 1rem;
-    color: #8d3272;
-    margin-bottom: 5px;
-  }
-  
-  form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  form input[type="number"] {
-    -webkit-appearance: none;
-    -moz-appearance: textfield;
-  }
-  
-  form button {
-    background-color: #8d3272;
-    color: #f8c3de;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  form button:hover {
-    background-color: #f8c3de;
-    color: #8d3272;
-  }
-  
-  form input:focus, form textarea:focus {
-    border-color: #8d3272;
-    outline: none;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #8d3272;  /* Cor de fundo igual ao header */
-    color: #f8c3de;  /* Cor do texto igual ao header */
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-  }
-  
-  /* Alinhamento à esquerda da navegação */
-  footer nav {
-    display: flex;
-    justify-content: flex-start;
-    flex: 1;
-  }
-  
-  footer nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  
+  background-color: #8d3272;  /* Background color of the header */
+  color: #f8c3de;  /* Text color */
+  padding: 20px;
+  text-align: center;
+}
+
+header img {
+  width: 100px;
+  height: auto;
+}
+
+header h2 {
+  margin: 10px 0;
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* Navigation */
+nav {
+  background-color: #8d3272;  /* Background color of the navigation bar */
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #f8c3de;  /* Color of the links */
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f8ff97;  /* Hover color (yellow) */
+  text-decoration: underline;
+}
+
+/* Main Form */
+main {
+  padding: 30px;
+  background-color: #fff3f8;  /* Light pink background for the form */
+}
+
+main h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #8d3272;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  font-size: 1rem;
+  color: #8d3272;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: #8d3272;
+  color: #f8c3de;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #f8c3de;
+  color: #8d3272;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #8d3272;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background-color: #8d3272;  /* Same as header */
+  color: #f8c3de;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+footer nav {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+footer nav ul li {
+  margin: 0 15px;
+}
+
+footer nav ul li a {
+  color: #f8c3de;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+  color: #f8ff97;  /* Hover color */
+  text-decoration: underline;
+}
+
+footer .footer-images {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer .footer-images img {
+  margin-left: 10px;
+  width: 50px;
+  height: auto;
+}
+
+footer div p {
+  background-color: #f8ff97;  /* Yellow background for the footer paragraph */
+  color: #8d3272;
+  font-size: 1rem;
+  margin-top: 15px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
   footer nav ul li {
-    margin: 0 15px;
+    display: block;
+    margin: 10px 0;
   }
-  
-  footer nav ul li a {
-    color: #f8c3de;  /* Cor dos links igual ao texto no header */
-    text-decoration: none;
+
+  form {
+    width: 90%;
+  }
+
+  header h2,
+  footer div p {
+    font-size: 1.5rem;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
     font-size: 1.1rem;
-    transition: color 0.3s ease;
   }
-  
-  footer nav ul li a:hover {
-    color: #f8ff97;  /* Amarelo quando passa o mouse */
-    text-decoration: underline;
-  }
-  
-  /* Alinhamento das imagens à direita */
+
   footer .footer-images {
-    display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     align-items: center;
   }
-  
+
   footer .footer-images img {
-    margin-left: 10px;
-    width: 50px;
-    height: auto;
+    margin-left: 0;
+    margin-bottom: 10px;
   }
-  
-  /* Parágrafo no footer com fundo amarelo e texto roxo */
-  footer div p {
-    background-color: #f8ff97;  /* Cor de fundo amarela */
-    color: #8d3272;  /* Cor do texto roxa */
-    font-size: 1rem;
-    margin-top: 15px;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 4px;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    footer nav ul li {
-      display: block;
-      margin: 10px 0;
-    }
-  
-    form {
-      width: 90%;
-    }
-  
-    header h2, footer div p {
-      font-size: 1.5rem;
-    }
-  }
-  
+}

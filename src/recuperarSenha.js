@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom"; // Importando o Link e useHistory
-import "./recuperarSenha.css"
+import "./recuperarSenha.css";
 
 function RecuperarSenha() {
   const [email, setEmail] = useState("");
@@ -13,10 +13,10 @@ function RecuperarSenha() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Aqui você pode adicionar lógica para enviar uma solicitação de recuperação de senha para o backend
+    // Lógica para envio de recuperação de senha
     if (email === "usuario1@exemplo.com" || email === "usuario2@exemplo.com") {
       alert("Instruções para recuperação de senha foram enviadas para o seu e-mail.");
-      history.push("/entrar.js"); // Redireciona para a página de login após o envio
+      history.push("/entrar"); // Redireciona para a página de login após o envio
     } else {
       alert("E-mail não encontrado. Tente novamente.");
     }
@@ -38,14 +38,14 @@ function RecuperarSenha() {
       {/* Nav */}
       <nav>
         <ul>
-          <li><Link to="/App.js">Home</Link></li>
+          <li><Link to="/App">Home</Link></li>
           <li><Link to="/sobreNos">Sobre nós</Link></li>
           <li><Link to="/contatos">Contato</Link></li>
         </ul>
       </nav>
 
       {/* Formulário de Recuperação de Senha */}
-      <div>
+      <main>
         <h2>Recuperação de Senha</h2>
         <form onSubmit={handleSubmit}>
           <div>
@@ -61,9 +61,9 @@ function RecuperarSenha() {
           <button type="submit">Enviar Instruções</button>
         </form>
         <p>
-          <Link to="/entar">Voltar para o Login</Link>
+          <Link to="/entrar">Voltar para o Login</Link>
         </p>
-      </div>
+      </main>
 
       {/* Footer */}
       <footer>
