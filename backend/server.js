@@ -1,20 +1,21 @@
 const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
+//const bcrypt = require('bcrypt');
 
 // Criação do servidor Express
 const server = express();
 const port = 8000;
 
 // Middleware para analisar o corpo das requisições (JSON)
-server.use(express.json());
+server.use(express.json()); //json é um arquivo de texto, onde vai guardar as informações de texto 
 
 // Ativar CORS para permitir chamadas de outras origens (por exemplo, React na porta 3000)
 server.use(cors());
 
 // Configuração da conexão com o MySQL
 const db = mysql.createConnection({
-    host: 'localhost',
+    host: 'localhost', //Servidor do banco
     user: 'root', // Substitua pelo seu usuário do MySQL
     password: '', // Substitua pela sua senha do MySQL
     database: 'ronroninha', // Nome do seu banco de dados
@@ -52,7 +53,7 @@ server.post('/usuarios', (req, res) => {
             res.status(201).json({ id: results.insertId, nome, email });
         }
     });
-});
+});//post é o método de envio de dados é via post ou método oculto
 
 // Rota para editar um usuário
 server.put('/usuarios/:id', (req, res) => {
@@ -112,6 +113,11 @@ server.post('/server/contatos', (req, res) => {
 // Endpoint sobre a página "Cadastrar Usuário"
 server.post('/server/cadastroUsuario', (req, res) => {
     res.json({ message: 'Duvidas? Entre em contato conosco.' });
+});
+
+// Endpoint sobre a página "Cadastrar Usuário"
+server.post('/server/login', (req, res) => {
+    res.json({ message: 'Conecte na Página.' });
 });
 
 // Iniciando o servidor na porta 8000

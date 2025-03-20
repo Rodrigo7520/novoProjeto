@@ -42,7 +42,7 @@ function Nav() {
   return (
     <nav>
       <ul>
-        <li><Link to="/Home">Home</Link></li> 
+        <li><Link to="/App">Home</Link></li> 
         <li><Link to="/sobreNos">Sobre nós</Link></li>
         <li><Link to="/contatos">Contato</Link></li>
         <li><Link to="/cadastroUsuario">Cadastro</Link></li>

@@ -6,6 +6,7 @@ import './sobreNos';
 import './Home';
 import './politicaLoja';
 import './cadastroUsuario';
+import './login';
 
 function Login() {
   const [formData, setFormData] = useState({

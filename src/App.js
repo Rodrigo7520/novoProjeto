@@ -6,7 +6,7 @@ import Contatos from './contatos';
 import SobreNos from './sobreNos';
 import PoliticaLoja from './politicaLoja';
 import CadastroUsuario from './cadastroUsuario';
-import Login from './login';
+import './login';
 
 // Componente Principal App
 function App() {
