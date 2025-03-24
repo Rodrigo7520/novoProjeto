@@ -6,7 +6,7 @@ import Contatos from './contatos';
 import SobreNos from './sobreNos';
 import PoliticaLoja from './politicaLoja';
 import CadastroUsuario from './cadastroUsuario';
-import './login';
+import Login from './login';
 
 // Componente Principal App
 function App() {
@@ -132,6 +132,7 @@ function AppRoutes() {
       <Route path="/contatos" element={<Contatos />} />
       <Route path="/cadastroUsuario" element={<CadastroUsuario />} />
       <Route path="/politicaLoja" element={<PoliticaLoja />} />
+      <Route path='/login' element={<Login />} />
     </Routes>
   );
 }

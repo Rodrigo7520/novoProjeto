@@ -4,6 +4,7 @@ import './sobreNos';
 import './contatos';
 import './politicaLoja';
 import './Home';
+import './login';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; 
 
 // Componente principal
@@ -39,7 +40,7 @@ function Nav() {
     <nav>
       <ul>
         <li><Link to="/home.js">Home</Link></li>
-        <li><Link to="/sobreNos.js">Sobre nós</Link></li>
+        <li><Link to="/sobreNos">Sobre nós</Link></li>
         <li><Link to="/contatos.js">Contato</Link></li>
         <li><Link to="/login">Entrar</Link></li>
       </ul>
@@ -90,6 +91,16 @@ function Main() {
           />
         </div>
         <div>
+          <label>Endereço:</label>
+          <input
+            type="endereco"
+            name="endereco"
+            value={formData.endereco}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
           <label>E-mail:</label>
           <input
             type="email"
@@ -129,7 +140,7 @@ function Main() {
             required
           />
         </div>
-        <button type="submit">Cadastro</button>
+       <center><button type="submit">Cadastro</button></center> 
       </form>
     </main>
   );
@@ -141,10 +152,10 @@ function Footer() {
     <footer>
       <nav>
         <ul>
-          <li><Link to="/home.js">Home</Link></li>
-          <li><Link to="/sobreNos.js">Sobre nós</Link></li>
-          <li><Link to="/politicaLoja.js">Política da Loja</Link></li>
-          <li><Link to="/contatos.js">Contatos</Link></li>
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/sobreNos">Sobre nós</Link></li>
+          <li><Link to="/politicaLoja">Política da Loja</Link></li>
+          <li><Link to="/contatos">Contatos</Link></li>
         </ul>
       </nav>
       <div>

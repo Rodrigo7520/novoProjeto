@@ -95,6 +95,11 @@ server.post('/server', (req, res) => {
     res.json({ message: 'Node rodando na porta 8000!' });
 });
 
+// Endpoint sobre a página "HomePage"
+server.post('/server/Home', (req, res) => {
+    res.json({ message: 'Bem vido a página Roroninha Cat Setter.' });
+});
+
 // Endpoint sobre a página "Sobre"
 server.post('/server/sobreNos', (req, res) => {
     res.json({ message: 'Informações sobre nossa empresa.' });
@@ -112,10 +117,10 @@ server.post('/server/contatos', (req, res) => {
 
 // Endpoint sobre a página "Cadastrar Usuário"
 server.post('/server/cadastroUsuario', (req, res) => {
-    res.json({ message: 'Duvidas? Entre em contato conosco.' });
+    res.json({ message: 'Cadastra-se com nosco!' });
 });
-
-// Endpoint sobre a página "Cadastrar Usuário"
+                                                          
+// Endpoint sobre a página "Login"
 server.post('/server/login', (req, res) => {
     res.json({ message: 'Conecte na Página.' });
 });

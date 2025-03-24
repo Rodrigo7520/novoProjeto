@@ -1,84 +1,42 @@
-/* Header */
-header {
-  background-color: #8d3272;
-  color: #9b1e63;
-  padding: 20px;
-  text-align: center;
-}
-
-header img {
-  width: 100px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-header h2 {
-  font-size: 2.5rem;
-  margin: 10px 0;
-}
-
-header p {
-  font-size: 1.1rem;
-  margin-top: 10px;
-  color: #f8ff97;
-}
-
-/* Navegação */
-nav {
-  background-color: #8d3272;
-  padding: 10px 0;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 15px;
-  color: #9b1e63;
-}
-
-nav ul li a {
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #f8ff97;
-  text-decoration: underline;
-}
-
 /* Main (Conteúdo principal) */
 main {
   padding: 30px;
   background-color: #fff3f8;
 }
 
-main h3 {
-  text-align: left;
-  font-size: 2rem;
-  color: #8d3272;
-  margin-bottom: 20px;
+/* Cartão de Informações de Contato */
+.info-contato {
+  border: 2px solid #8d3272;  /* Borda roxa */
+  border-radius: 10px;  /* Bordas arredondadas */
+  padding: 20px;
+  background-color: #ffffff;
 }
 
-main p {
-  font-size: 1.1rem;
-  color: #5a3a45;
-  line-height: 1.6;
-  margin-bottom: 20px;
+.info-contato p {
+  margin-bottom: 10px;
+  color: #5a3a45;  /* Cor do texto */
 }
 
+.info-contato a {
+  color: #8d3272;  /* Cor do link */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info-contato a:hover {
+  color: #f8ff97;  /* Amarelo quando passa o mouse */
+}
+
+/* Google Map */
 .google-map iframe {
   border-radius: 10px;
+  border: 3px solid #8d3272;  /* Borda roxa */
 }
 
 /* Footer */
 footer {
-  background-color: #8d3272;  /* Cor de fundo igual ao header */
-  color: #f8c3de;  /* Cor do texto igual ao header */
+  background-color: #8d3272;
+  color: #f8c3de;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -104,20 +62,20 @@ footer nav ul li {
 }
 
 footer nav ul li a {
-  color:  #8d3272;  /* Cor dos links igual ao texto no header */
+  color:  #8d3272;
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
 footer nav ul li a:hover {
-  color: #f8ff97;  /* Amarelo quando passa o mouse */
+  color: #f8ff97;
   text-decoration: underline;
 }
 
 footer div p {
-  background-color: #f8ff97;  /* Cor de fundo amarela */
-  color: #8d3272;  /* Cor do texto roxa */
+  background-color: #f8ff97;
+  color: #8d3272;
   font-size: 1rem;
   margin-top: 15px;
   font-weight: bold;
