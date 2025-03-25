@@ -1,8 +1,7 @@
 // src/pages/Orcamento.js
-import React from 'react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Orcamento.css';
+import './orcamento.css';
 
 function Orcamento() {
   const [formData, setFormData] = useState({
@@ -47,9 +46,9 @@ function Orcamento() {
       {/* Nav */}
       <nav>
         <ul>
-          <li><Link to="/homePage.js">Home</Link></li>
-          <li><Link to="/sobreNos.js">Sobre nós</Link></li>
-          <li><Link to="/contatos.js">Contato</Link></li>
+          <li><Link to="/Home">Home</Link></li>
+          <li><Link to="/sobreNos">Sobre nós</Link></li>
+          <li><Link to="/contatos">Contato</Link></li>
         </ul>
       </nav>
 
@@ -155,10 +154,10 @@ function Orcamento() {
         {/* Navegação à esquerda */}
         <nav>
             <ul>
-            <li><Link to="/homePage.js">Home</Link></li>
-            <li><Link to="/sobreNos.js">Sobre nós</Link></li>
-            <li><Link to="/politicaLoja.js">Política da Loja</Link></li>
-            <li><Link to="/contatos.js">Contato</Link></li>
+            <li><Link to="/Home">Home</Link></li>
+            <li><Link to="/sobreNos">Sobre nós</Link></li>
+            <li><Link to="/politicaLoja">Política da Loja</Link></li>
+            <li><Link to="/contatos">Contato</Link></li>
             </ul>
         </nav>
 

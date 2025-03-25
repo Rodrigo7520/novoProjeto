@@ -7,6 +7,8 @@ import SobreNos from './sobreNos';
 import PoliticaLoja from './politicaLoja';
 import CadastroUsuario from './cadastroUsuario';
 import Login from './login';
+import RecuperarSenha from './recuperarSenha';
+import Orcamento from './orcamento';
 
 // Componente Principal App
 function App() {
@@ -133,6 +135,8 @@ function AppRoutes() {
       <Route path="/cadastroUsuario" element={<CadastroUsuario />} />
       <Route path="/politicaLoja" element={<PoliticaLoja />} />
       <Route path='/login' element={<Login />} />
+      <Route path='/recuperarSenha' element={<RecuperarSenha />} />
+      <Route path='/orcamento' element={<Orcamento />} />
     </Routes>
   );
 }

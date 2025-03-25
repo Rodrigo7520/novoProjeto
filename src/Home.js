@@ -148,7 +148,7 @@ function BudgetCard() {
         algum serviço de cat care. Para saber o valor no seu endereço preencha abaixo
         o formulário de pedido de orçamento com todas as informações solicitadas ❤️.
       </p>
-      <Link to="/orcamento.js">
+      <Link to="/orcamento">
       <button className="btn-orcamento">Faça seu orçamento</button>
       </Link>
     </div>

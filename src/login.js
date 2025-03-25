@@ -7,6 +7,7 @@ import './Home';
 import './politicaLoja';
 import './cadastroUsuario';
 import './login';
+import './recuperarSenha';
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -47,9 +48,8 @@ function Login() {
   };
 
   const handleForgotPassword = () => {
-    alert("Funcionalidade de recuperação de senha ainda não implementada!");
-    // Use navigate to redirect to the password recovery route
-    navigate("/recuperarSenha");
+    alert("Redirecionando para a página de recuperação de senha.");
+    navigate("/recuperarSenha"); // Certifique-se de que o caminho está correto
   };
 
   return (

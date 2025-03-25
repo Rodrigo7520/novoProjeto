@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom"; // Importando o Link e useHistory
+import { Link, useNavigate } from "react-router-dom"; // Replace useHistory with useNavigate
 import "./recuperarSenha.css";
 
 function RecuperarSenha() {
   const [email, setEmail] = useState("");
-  const history = useHistory();
+  const navigate = useNavigate(); // Use useNavigate instead of useHistory
 
   const handleChange = (e) => {
     setEmail(e.target.value);
@@ -16,7 +16,7 @@ function RecuperarSenha() {
     // Lógica para envio de recuperação de senha
     if (email === "usuario1@exemplo.com" || email === "usuario2@exemplo.com") {
       alert("Instruções para recuperação de senha foram enviadas para o seu e-mail.");
-      history.push("/entrar"); // Redireciona para a página de login após o envio
+      navigate("/entrar"); // Use navigate instead of history.push
     } else {
       alert("E-mail não encontrado. Tente novamente.");
     }
@@ -61,7 +61,7 @@ function RecuperarSenha() {
           <button type="submit">Enviar Instruções</button>
         </form>
         <p>
-          <Link to="/entrar">Voltar para o Login</Link>
+          <Link to="/login">Voltar para o Login</Link> {/* Corrigir o caminho para "/login" */}
         </p>
       </main>
 
