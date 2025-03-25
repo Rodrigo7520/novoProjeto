@@ -136,7 +136,6 @@ function AppRoutes() {
       <Route path="/politicaLoja" element={<PoliticaLoja />} />
       <Route path='/login' element={<Login />} />
       <Route path='/recuperarSenha' element={<RecuperarSenha />} />
-      <Route path='/orcamento' element={<Orcamento />} />
     </Routes>
   );
 }

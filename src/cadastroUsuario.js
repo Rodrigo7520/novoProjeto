@@ -39,9 +39,9 @@ function Nav() {
   return (
     <nav>
       <ul>
-        <li><Link to="/home.js">Home</Link></li>
+        <li><Link to="/home">Home</Link></li> {/* Remova ".js" */}
         <li><Link to="/sobreNos">Sobre nós</Link></li>
-        <li><Link to="/contatos.js">Contato</Link></li>
+        <li><Link to="/contatos">Contato</Link></li> {/* Remova ".js" */}
         <li><Link to="/login">Entrar</Link></li>
       </ul>
     </nav>

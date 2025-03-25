@@ -68,7 +68,7 @@ function Login() {
       {/* Nav */}
       <nav>
         <ul>
-          <li><Link to="/Home.js">Home</Link></li>
+          <li><Link to="/Home">Home</Link></li>
           <li><Link to="/sobreNos">Sobre nós</Link></li>
           <li><Link to="/contatos">Contato</Link></li>
         </ul>

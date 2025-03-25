@@ -39,8 +39,8 @@ function Nav() {
   return (
     <nav>
       <ul>
-        <li><Link to="/Home.js">Home</Link></li> {/* Usando o Link do react-router-dom */}
-        <li><Link to="/sobreNos.js">Sobre nós</Link></li>
+        <li><Link to="/Home">Home</Link></li> {/* Usando o Link do react-router-dom */}
+        <li><Link to="/sobreNos">Sobre nós</Link></li>
         <li><Link to="/contatos">Contato</Link></li>
         <li><Link to="/cadastroUsuario">Cadastro</Link></li>
         <li><Link to="/login">Entrar</Link></li>
